@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import './Photos.css';
 //Component
 import Contador from "./Contador";
-import Comentarios from "./Comentarios";
+// import Comentarios from "./Comentarios";
 export default function Photos(){
     const [photos, setPhotos] = useState([]);
 
@@ -17,7 +17,7 @@ export default function Photos(){
 
     useEffect(() => {
         doFetch();
-    }, [])
+    }, []);
 
     // var x = "https://via.placeholder.com/150/92c952";
     return(
@@ -28,7 +28,7 @@ export default function Photos(){
                 <h2>{photo.id}. {photo.title}</h2>
                 <img src={photo.url} alt="" className="image"/>
                 <Contador />
-                <Comentarios/>
+                {/* <Comentarios/> */}
                </div>
                );
             })}
